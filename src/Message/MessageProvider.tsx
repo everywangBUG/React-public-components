@@ -1,8 +1,8 @@
 import React, { CSSProperties, ReactNode, useMemo, forwardRef } from "react"
 import { useStore } from "./useStore"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
-import s from "./MessageProvider.module.scss"
-import "./MessageProvider.scss"
+// import s from "./MessageProvider.module.scss"
+// import "./MessageProvider.scss"
 import { createPortal } from "react-dom"
 import { useTimer } from "./useTimer"
 
@@ -26,7 +26,7 @@ export const MessageItem: React.FC<MessageProps> = (props) => {
   })
 
   return (
-    <div className={s["message-item"]} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    <div className="message-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       {props.content}
     </div>
   )
@@ -73,10 +73,10 @@ export const MessageProvider: React.FC<{}> = forwardRef<MessageRef, {}>((props, 
   const positions = Object.keys(messageList) as Position[]
 
   const messageWrapper =
-    <div className={s["message-wrapper"]}>
+    <div className="message-wrapper">
       {
         positions.map(direction => (
-          <TransitionGroup className={s[`message-wrapper-${direction}`]} key={direction}>
+          <TransitionGroup className={`message-wrapper-${direction}`} key={direction}>
             {
               messageList[direction].map(item => {
                 return <CSSTransition key={item.id} timeout={300} classNames="message">
