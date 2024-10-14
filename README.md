@@ -2,7 +2,6 @@
 ## css和js分开编译
 * 注销Message、Watermark、Calendar中的scss文件
 ## 添加一个index.ts文件导出公共组件
-*
 ```javascript
 import Calendar, { CalendarProps } from './Calendar';
 import Watermark, { WatermarkProps } from './Watermark';
@@ -54,13 +53,11 @@ export type {
 ```
 ## 编译
 ### 编译cjs和esm
-*
 ```javascript
 npx tsc -p tsconfig.build.json --module ESNext --outDir dist/esm
 npx tsc -p tsconfig.build.json --module commonjs --outDir dist/cjs
 ```
 ### 编译scss
-*
 ```javascript
 npx sass ./src/Message/MessageProvider.scss ./dist/esm/Message/MessageProvider.css
 ```
