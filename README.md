@@ -78,5 +78,10 @@ npx sass ./src/Message/MessageProvider.scss ./dist/esm/Message/MessageProvider.c
 ],
 ```
 ## npm adduser
-* `npm login --auth-type=legacy`登录用户名和密码
+* `npm adduser --auth-type=legacy`登录用户名和密码
+* Username: npm用户名
+* Password: npm密码
+* Email: npm邮箱
+* Enter OPT，npm开启2fa后输入动态验证码，进入登录页面，生成OPT输入
+* `npm whoami`监测是否登录成功
 * 登录成功后，执行`npm publish`
